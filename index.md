@@ -1,3 +1,6 @@
+---
+layout: index
+---
 <H1>
     <p>Cognitive science has developed from the belief that the human mind, though complex and
         ultimately
