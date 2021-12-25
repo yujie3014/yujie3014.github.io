@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    background-color: #333;
+}
+H1 {
+    font-family: CrimsonText;
+    font-size: 33px;
+    letter-spacing: -0.66px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+H2 {
+    font-family: CrimsonText;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+}
+.content_text {
+    font-family: CrimsonText;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+.button_text {
+    font-family: CrimsonText;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+.button_text:hover{
+    text-decoration:underline;
+}
+.padding{
+    height:100%;
+}
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 5%;
+    background-color: #fff;
+    height:100%;
+}
+.maincontent{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 5%;
+    background-color: #fff;
+}
+.indexcontent{
+    max-width: 786px;
+    margin:0 auto 0 8%;
+    padding: 50px 0;
+}
+.indexcontent h1{
+    margin: 150px 0;
+}
+.nav{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.nav li{
+    float: left;
+    padding: 0px 10px 0px 10px;
+    height: 43px;
+    line-height: 43px;
+    background-color: #f2f2f2;
+    margin:0 10px 0 0;
+}
+.navbar{
+    padding: 100px 0 0 0;
+}
+.innercontent{
+    clear: both;
+    padding: 78px 0 160px 31px;
+    max-width: 800px;
+}
+.innercontent a{
+    font-family: CrimsonText;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: #007aff;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 25px;
+    text-decoration: none;
+}
+.innercontent a:hover{
+    text-decoration:underline;
+}
+.innercontent p{
+    font-family: CrimsonText;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: #444;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 25px;
+}
+.innercontent div,.innercontent h2{
+    clear: both;
+}
+.about img{
+float: left;
+margin: 30px 0 90px 90px;
+}
+.about div{
+    float:left;
+    width:350px;
+}
+.publications{
+    padding-top: 50px;
+}
+.publications ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.publications li{
+    position: relative;
+    height:fit-content;
+    padding: 0px 0px 180px 0px;
+}
+.publications li div{
+    width:618px;
+    margin:0 0 0 269px;
+}
+.publications li img{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+.framing_top{
+    margin: 0 0 90px 0;
+    font-weight: 600;
+    width:718px;
+}
+.framing_top p{
+    margin: 44px 0;
+}
+.framing div{
+    width:680px;
+    margin: 69px 0;
+}
+.framing p{
+    margin: 44px 0;
+}

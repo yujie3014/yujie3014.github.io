@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    background-color: #fff;
+}
+
+H1 {
+    font-family: CrimsonText;
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+H2 {
+    font-family: CrimsonText;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+.content_text {
+    font-family: CrimsonText;
+    font-size: 13px;
+    letter-spacing: -0.26px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+}
+.button_text {
+    font-family: CrimsonText;
+    font-size: 13px;
+    letter-spacing: -0.26px;
+    text-align: left;
+    color: #444;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-decoration:none;
+}
+.button_text:hover{
+    text-decoration:underline;
+}
+.nav{
+    position: absolute;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px auto;
+    left:0;
+    right:0;
+    bottom: 10px;
+    width: fit-content;
+}
+.nav li{
+    float: left;
+    padding: 0px 10px;
+    height: 43px;
+    line-height: 43px;
+    background-color: #f2f2f2;
+    margin:0 5px;
+}
+.indexcontent{
+    padding: 0px 56px;
+    position:relative;
+}
+.indexcontent h1{
+    margin: 0px;
+    padding: 100px 0;
+}
+.indexcontent p{
+    padding:30px 0;
+    margin: 0;
+}
+.email{
+    display: none;
+}
+.navbar{
+    position: fixed;
+    height: 60px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #fff;
+}
+.innercontent{
+    margin: 72px 47px;
+}
+.innercontent p{
+    font-family: CrimsonText;
+    font-size: 13px;
+    text-align: left;
+    color: #444;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 18px;
+}
+.innercontent a{
+    font-family: CrimsonText;
+    font-size: 13px;
+    text-align: left;
+    color: #007aff;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 18px;
+    text-decoration: none;
+}
+.innercontent a:hover{
+    text-decoration:underline;
+}
+.innercontent div{
+    margin: 0px 2px;
+}
+.about img{
+    width: calc(100% + 98px);
+    margin-left: -49px;
+}
+.publications{
+    padding-top: 50px;
+}
+.publications ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.publications li img{
+    width: calc(100% + 98px);
+    margin-left: -49px;
+}
+.framing_top{
+    margin: 0 0 55px 0;
+    font-weight: 600;
+}
+.framing_top p{
+    margin: 30px 0;
+}
+.framing div{
+    margin: 55px 0;
+}
+.framing p{
+    margin: 30px 0;
+}
