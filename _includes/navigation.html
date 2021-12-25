@@ -1,7 +1,7 @@
 <ul class="nav">
-    <li><a class="button_text" href="about.html">About</a></li>
-    <li><a class="button_text" href="publications.html">Publications</a></li>
-    <li><a class="button_text" href="what_is_framing.html">What Is Framing?</a></li>
+    <li><a class="button_text" href="about.html" {% if page.url == "/about.html" %}class="current"{% endif %}>About</a></li>
+    <li><a class="button_text" href="publications.html" {% if page.url == "/publications.html" %}class="current"{% endif %}>Publications</a></li>
+    <li><a class="button_text" href="what_is_framing.html" {% if page.url == "/what_is_framing.html" %}class="current"{% endif %}>What Is Framing?</a></li>
     <li class="email"><a class="button_text"
             href="mailto:contact@elisabethwehling.com">contact@elisabethwehling.com</a></li>
 </ul>
