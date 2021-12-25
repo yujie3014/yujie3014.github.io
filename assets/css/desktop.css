@@ -57,6 +57,9 @@ H2 {
 .button_text:hover{
     text-decoration:underline;
 }
+.current{
+    color: #666;
+}
 .padding{
     height:100%;
 }
