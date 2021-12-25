@@ -51,6 +51,9 @@ H2 {
 .button_text:hover{
     text-decoration:underline;
 }
+.current{
+    color: #888;
+}
 .nav{
     position: absolute;
     list-style-type: none;
