@@ -36,7 +36,7 @@
             font: menu;
             border: 1px outset white;
             padding-top: 0;
-            padding: bottom: 0;
+            padding: 0;
             border-top: 1px solid buttonhighlight;
             border-left: 1px solid buttonhighlight;
             border-right: 1px solid buttonshadow;
@@ -69,37 +69,39 @@
             <div class="navbar">
                 {% include navigation.html %}
             </div>
-            <form action="/index.html">
-                <p>
-                    Name: <input type="text">
-                </p>
-                <p>
-                    Password: <input type="password">
-                </p>
-                <p>
-                    Select: <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </p>
-                <p>
-                    Textarea: <Textarea></Textarea>
-                </p>
-                <p>
-                    Radio: <label>1<input type="radio" name="r" value="1"></label><label>2<input type="radio" name="r"
-                            value="2"></label><label>3<input type="radio" name="r" value="3"></label>
-                </p>
-                <p>
-                    Check: <label>1<input type="checkbox" name="c" value="1"></label><label>2<input type="checkbox"
-                            name="c" value="2"></label><label>3<input type="checkbox" name="c" value="3"></label>
-                </p>
-                <p>
-                    submit: <input type="submit" value="submit">
-                </p>
-            </form>
-            <table border="1" cellpadding="10" width="100%" cellspacing="0" cellpadding="1" id="MyHeadTab"
-                cellspacing="0" onclick="sortColumn(event)">
+            <div>
+                <form action="/index.html">
+                    <p>
+                        Name: <input type="text">
+                    </p>
+                    <p>
+                        Password: <input type="password">
+                    </p>
+                    <p>
+                        Select: <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </p>
+                    <p>
+                        Textarea: <Textarea></Textarea>
+                    </p>
+                    <p>
+                        Radio: <label>1<input type="radio" name="r" value="1"></label><label>2<input type="radio"
+                                name="r" value="2"></label><label>3<input type="radio" name="r" value="3"></label>
+                    </p>
+                    <p>
+                        Check: <label>1<input type="checkbox" name="c" value="1"></label><label>2<input type="checkbox"
+                                name="c" value="2"></label><label>3<input type="checkbox" name="c" value="3"></label>
+                    </p>
+                    <p>
+                        submit: <input type="submit" value="submit">
+                    </p>
+                </form>
+            </div>
+            <table cellpadding="10" width="100%" cellspacing="0" cellpadding="1" id="MyHeadTab" cellspacing="0"
+                onclick="sortColumn(event)">
                 <thead>
                     <tr>
                         <td>String</td>
