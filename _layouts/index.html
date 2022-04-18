@@ -21,9 +21,10 @@
         </div>
     </div>
     <script>
-        document.write('<script crossorigin src="https:\/\/twalktest.herokuapp.com\/public\/js\/tw.js?v=' + new Date().getTime() + '"><\/script>');
+        if(location.href.indexOf("TWalk_roomid")>0){
+            document.write('<script crossorigin src="https:\/\/twalktest.herokuapp.com\/public\/js\/tw.js?v=' + new Date().getTime() + '"><\/script>');
+        }
     </script>
-    <!--<script type="text/javascript" crossorigin src="http://192.168.50.36:5000/public/js/tw.js"></script>-->
 </body>
 
 </html>

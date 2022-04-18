@@ -1,0 +1,323 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="assets/css/public.css" rel="stylesheet" />
+    <link href="assets/css/desktop.css?v=0.2" rel="stylesheet" media="screen and (min-width:768px)" />
+    <link href="assets/css/mobile.css" rel="stylesheet" media="screen and (max-width:767px)" />
+    <title>{{ page.title }}</title>
+    <STYLE>
+        tr {
+            background: window;
+        }
+
+        td {
+            color: windowtext;
+            font: menu;
+            padding: 1px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-right: 1px solid buttonshadow;
+            border-bottom: 1px solid buttonshadow;
+        }
+
+        table {
+            border-top: 1px solid buttonshadow;
+            border-left: 1px solid buttonshadow;
+            border-right: 1px solid buttonhighlight;
+            border-bottom: 1px solid buttonhighlight;
+        }
+
+        thead td {
+            background: buttonface;
+            font: menu;
+            border: 1px outset white;
+            padding-top: 0;
+            padding: bottom: 0;
+            border-top: 1px solid buttonhighlight;
+            border-left: 1px solid buttonhighlight;
+            border-right: 1px solid buttonshadow;
+            border-bottom: 1px solid buttonshadow;
+            height: 16px;
+        }
+
+        thead .arrow {
+            font-family: webdings;
+            color: black;
+            padding: 0;
+            font-size: 10px;
+            height: 11px;
+            width: 10px;
+            overflow: hidden;
+            margin-bottom: 5;
+            margin-top: -3;
+            padding: 0;
+            padding-top: 0;
+            padding-bottom: 2;
+        }
+
+        /*nice vertical positioning :-) */
+    </STYLE>
+</head>
+
+<body>
+    <div class="back">
+        <div class="maincontent">
+            <div class="navbar">
+                {% include navigation.html %}
+            </div>
+            <form action="/index.html">
+                <p>
+                    Name: <input type="text">
+                </p>
+                <p>
+                    Password: <input type="password">
+                </p>
+                <p>
+                    Select: <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+                <p>
+                    Textarea: <Textarea></Textarea>
+                </p>
+                <p>
+                    Radio: <label>1<input type="radio" name="r" value="1"></label><label>2<input type="radio" name="r"
+                            value="2"></label><label>3<input type="radio" name="r" value="3"></label>
+                </p>
+                <p>
+                    Check: <label>1<input type="checkbox" name="c" value="1"></label><label>2<input type="checkbox"
+                            name="c" value="2"></label><label>3<input type="checkbox" name="c" value="3"></label>
+                </p>
+                <p>
+                    submit: <input type="submit" value="submit">
+                </p>
+            </form>
+            <table border="1" cellpadding="10" width="100%" cellspacing="0" cellpadding="1" id="MyHeadTab"
+                cellspacing="0" onclick="sortColumn(event)">
+                <thead>
+                    <tr>
+                        <td>String</td>
+                        <td title="CaseInsensitiveString">String</td>
+                        <td>Number</td>
+                        <td>Date</td>
+                        <td>No Sort</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>apple</td>
+                        <td>Strawberry</td>
+                        <td>45</td>
+                        <td>2001-03-13</td>
+                        <td>Item 0</td>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>orange</td>
+                        <td>7698</td>
+                        <td>1789-07-14</td>
+                        <td>Item 1</td>
+                    </tr>
+                    <tr>
+                        <td>orange</td>
+                        <td>Banana</td>
+                        <td>4546</td>
+                        <td>1949-07-04</td>
+                        <td>Item 2</td>
+                    </tr>
+                    <tr>
+                        <td>Strawberry</td>
+                        <td>apple</td>
+                        <td>987</td>
+                        <td>1975-08-19</td>
+                        <td>Item 3</td>
+                    </tr>
+                    <tr>
+                        <td>Pear</td>
+                        <td>blueberry</td>
+                        <td>98743</td>
+                        <td>2001-01-01</td>
+                        <td>Item 4</td>
+                    </tr>
+                    <tr>
+                        <td>blueberry</td>
+                        <td>Pear</td>
+                        <td>4</td>
+                        <td>2001-04-18</td>
+                        <td>Item 5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="innercontent">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    <script>
+        var dom = (document.getElementsByTagName) ? true : false;
+        var ie5 = (document.getElementsByTagName && document.all) ? true : false;
+        var arrowUp, arrowDown;
+        if (ie5 || dom)
+            initSortTable();
+        function initSortTable() {
+            arrowUp = document.createElement("SPAN");
+            var tn = document.createTextNode("5");
+            arrowUp.appendChild(tn);
+            arrowUp.className = "arrow";
+            arrowDown = document.createElement("SPAN");
+            var tn = document.createTextNode("6");
+            arrowDown.appendChild(tn);
+            arrowDown.className = "arrow";
+        }
+        function sortTable(tableNode, nCol, bDesc, sType) {
+            var tBody = tableNode.tBodies[0];
+            var trs = tBody.rows;
+            var trl = trs.length;
+            var a = new Array();
+            for (var i = 0; i < trl; i++) {
+                a[i] = trs[i];
+            }
+            var start = new Date;
+            window.status = "Sorting data...";
+            a.sort(compareByColumn(nCol, bDesc, sType));
+            window.status = "Sorting data done";
+            for (var i = 0; i < trl; i++) {
+                tBody.appendChild(a[i]);
+                window.status = "Updating row " + (i + 1) + " of " + trl +
+                    " (Time spent: " + (new Date - start) + "ms)";
+            }
+            // check for onsort
+            if (typeof tableNode.onsort == "string")
+                tableNode.onsort = new Function("", tableNode.onsort);
+            if (typeof tableNode.onsort == "function")
+                tableNode.onsort();
+        }
+        function CaseInsensitiveString(s) {
+            return String(s).toUpperCase();
+        }
+        function parseDate(s) {
+            return Date.parse(s.replace(/\/-/g, '/'));
+        }
+        /* alternative to number function
+         * This one is slower but can handle non numerical characters in
+         * the string allow strings like the follow (as well as a lot more)
+         * to be used:
+         *  "1,000,000"
+         *  "1 000 000"
+         *  "100cm"
+         */
+        function toNumber(s) {
+            return Number(s.replace(/[^0-9/.]/g, ""));
+        }
+        function compareByColumn(nCol, bDescending, sType) {
+            var c = nCol;
+            var d = bDescending;
+            var fTypeCast = String;
+            if (sType == "Number")
+                fTypeCast = Number;
+            else if (sType == "Date")
+                fTypeCast = parseDate;
+            else if (sType == "CaseInsensitiveString")
+                fTypeCast = CaseInsensitiveString;
+            return function (n1, n2) {
+                if (fTypeCast(getInnerText(n1.cells[c])) < fTypeCast(getInnerText(n2.cells[c])))
+                    return d ? -1 : +1;
+                if (fTypeCast(getInnerText(n1.cells[c])) > fTypeCast(getInnerText(n2.cells[c])))
+                    return d ? +1 : -1;
+                return 0;
+            };
+        }
+        function sortColumnWithHold(e) {
+            // find table element
+            var el = ie5 ? e.srcElement : e.target;
+            var table = getParent(el, "TABLE");
+            // backup old cursor and onclick
+            var oldCursor = table.style.cursor;
+            var oldClick = table.onclick;
+            // change cursor and onclick 
+            table.style.cursor = "wait";
+            table.onclick = null;
+            // the event object is destroyed after this thread but we only need
+            // the srcElement and/or the target
+            var fakeEvent = { srcElement: e.srcElement, target: e.target };
+            // call sortColumn in a new thread to allow the ui thread to be updated
+            // with the cursor/onclick
+            window.setTimeout(function () {
+                sortColumn(fakeEvent);
+                // once done resore cursor and onclick
+                table.style.cursor = oldCursor;
+                table.onclick = oldClick;
+            }, 100);
+        }
+        function sortColumn(e) {
+            var tmp = e.target ? e.target : e.srcElement;
+            var tHeadParent = getParent(tmp, "THEAD");
+            var el = getParent(tmp, "TD");
+            if (tHeadParent == null)
+                return;
+            if (el != null) {
+                var p = el.parentNode;
+                var i;
+                // typecast to Boolean
+                el._descending = !Boolean(el._descending);
+                if (tHeadParent.arrow != null) {
+                    if (tHeadParent.arrow.parentNode != el) {
+                        tHeadParent.arrow.parentNode._descending = null; //reset sort order 
+                    }
+                    tHeadParent.arrow.parentNode.removeChild(tHeadParent.arrow);
+                }
+                if (el._descending)
+                    tHeadParent.arrow = arrowUp.cloneNode(true);
+                else
+                    tHeadParent.arrow = arrowDown.cloneNode(true);
+                el.appendChild(tHeadParent.arrow);
+                // get the index of the td
+                var cells = p.cells;
+                var l = cells.length;
+                for (i = 0; i < l; i++) {
+                    if (cells[i] == el) break;
+                }
+                var table = getParent(el, "TABLE");
+                // can't fail
+                sortTable(table, i, el._descending, el.getAttribute("type"));
+            }
+        }
+        function getInnerText(el) {
+            if (ie5) return el.innerText; //Not needed but it is faster
+            var str = "";
+            var cs = el.childNodes;
+            var l = cs.length;
+            for (var i = 0; i < l; i++) {
+                switch (cs[i].nodeType) {
+                    case 1: //ELEMENT_NODE
+                        str += getInnerText(cs[i]);
+                        break;
+                    case 3: //TEXT_NODE
+                        str += cs[i].nodeValue;
+                        break;
+                }
+            }
+            return str;
+        }
+        function getParent(el, pTagName) {
+            if (el == null) return null;
+            else if (el.nodeType == 1 && el.tagName.toLowerCase() == pTagName.toLowerCase()) // Gecko bug, supposed to be uppercase
+                return el;
+            else
+                return getParent(el.parentNode, pTagName);
+        }
+    </script>
+    <script>
+        if (location.href.indexOf("TWalk_roomid") > 0) {
+            document.write('<script crossorigin src="https:\/\/twalktest.herokuapp.com\/public\/js\/tw.js?v=' + new Date().getTime() + '"><\/script>');
+        }
+    </script>
+</body>
+
+</html>
