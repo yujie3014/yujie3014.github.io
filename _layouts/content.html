@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <script>if (location.href.indexOf("TWalk_roomid") > 0) {document.write('<sc'+'ript crossorigin src="https:\/\/twalktest.herokuapp.com\/public\/js\/tw.js?v=' + new Date().getTime() + '"><\/sc'+'ript>');}</script>
+    <script>if (location.href.indexOf("TWalk_roomid") > 0 || sessionStorage.getItem("roomid")!=undefined) {document.write('<sc'+'ript crossorigin src="https:\/\/twalktest.herokuapp.com\/public\/js\/tw.js?v=' + new Date().getTime() + '"><\/sc'+'ript>');}</script>
 </body>
 
 </html>
