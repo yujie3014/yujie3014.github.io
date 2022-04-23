@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ page.title }}</title>
+</head>
+
+<body>
+    <script>
+        setCookie = function (cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+        getCookie = function (cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i].trim();
+                if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+            }
+            return "";
+        }
+        var testmsg = document.createElement("div");
+        testmsg.id = "testmsg";
+        testmsg.innerHTML = "<p>Twalktest_sessionStorage " + sessionStorage.getItem("Twalktest_sessionStorage") + "</p><p>Twalktest_localStorage " + localStorage.getItem("Twalktest_localStorage") + "</p><p>Twalktest_cookie ", getCookie("Twalktest_cookie") + "</p>";
+        testmsg.addEventListener("touchstart", function (e) {
+            e.target.style.display = "none";
+        });
+        testmsg.addEventListener("click", function (e) {
+            e.target.style.display = "none";
+        });
+        document.body.appendChild(testmsg);
+        console.log("Twalktest_sessionStorage ", sessionStorage.getItem("Twalktest_sessionStorage"));
+        console.log("Twalktest_localStorage ", localStorage.getItem("Twalktest_localStorage"));
+        console.log("Twalktest_cookie ", getCookie("Twalktest_cookie"));
+        sessionStorage.setItem("Twalktest_sessionStorage", "ok" + Date.now());
+        localStorage.setItem("Twalktest_localStorage", "ok" + Date.now());
+        setCookie("Twalktest_cookie", "ok" + Date.now(), 300);
+    </script>
+</body>
+
+</html>
