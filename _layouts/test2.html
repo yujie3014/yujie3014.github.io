@@ -27,7 +27,7 @@
         }
         var testmsg = document.createElement("div");
         testmsg.id = "testmsg";
-        testmsg.innerHTML = "<p>Twalktest_sessionStorage " + sessionStorage.getItem("Twalktest_sessionStorage") + "</p><p>Twalktest_localStorage " + localStorage.getItem("Twalktest_localStorage") + "</p><p>Twalktest_cookie ", getCookie("Twalktest_cookie") + "</p>";
+        testmsg.innerHTML = "<p>Twalktest_sessionStorage " + sessionStorage.getItem("Twalktest_sessionStorage") + "</p><p>Twalktest_localStorage " + localStorage.getItem("Twalktest_localStorage") + "</p><p>Twalktest_cookie "+ getCookie("Twalktest_cookie") + "</p>";
         testmsg.addEventListener("touchstart", function (e) {
             e.target.style.display = "none";
         });
