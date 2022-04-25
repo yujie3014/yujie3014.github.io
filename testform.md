@@ -17,7 +17,7 @@ title: Test
                 <p>“An important book with an extremely high gain in knowledge.”
                     Gert Scobel, 3Sat Talkshow Host</p>
             </div>
-            <img src="pictures/publications1.jpg">
+            <img src="pictures/publications1.jpg"/>
         </li>
         <li>
             <div>
@@ -32,7 +32,7 @@ title: Test
                     policy changes Americans need.”
                     Van Jones, CNN Talkshow Host </p>
             </div>
-            <img src="pictures/publications2.jpg">
+            <img src="pictures/publications2.jpg"/>
         </li>
         <li>
             <div>
@@ -46,7 +46,7 @@ title: Test
                 <p>“Fierce, yet not polemic. Easy to read, yet scientific.”
                     media-mania.de</p>
             </div>
-            <img src="pictures/publications3.jpg">
+            <img src="pictures/publications3.jpg"/>
         </li>
     </ul>
 </div>

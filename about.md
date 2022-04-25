@@ -23,7 +23,7 @@ title: About
             and was preselected for Germany's most prestigious journalism award “Nannen Preis” in 2020.
         </p>
     </div>
-    <img src="pictures/about.jpg">
+    <img src="pictures/about.jpg"/>
 </div>
 <h2>Consultant</h2>
 <div>
