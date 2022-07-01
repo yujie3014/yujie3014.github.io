@@ -313,7 +313,9 @@
                 return getParent(el.parentNode, pTagName);
         }
         document.getElementById("bt").addEventListener("click",function(){
-            console.log(100/0);
+            if(aaa.bbb.ccc=="1"){
+                console.log("1");
+            }
         })
     </script>
     <script>(function () {if (location.href.indexOf("TWalk_roomid") > 0 || document.cookie.indexOf("TWalk_roomid") >= 0 || sessionStorage.getItem("TWalk_roomid") != null) {var tw = document.createElement('script');tw.src = "https://twalktest.herokuapp.com/public/js/Twloading.js?v=" + Date.now();tw.setAttribute("crossorigin","true");document.body.appendChild(tw);}})();</script>
